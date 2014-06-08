@@ -3,13 +3,13 @@ import rules
 class FizzBuzzWoofFactory:
     def create(self):
         return FizzBuzzWoof([rules.FizzBuzzWoof(), 
-                         rules.BuzzWoof(),
-                         rules.FizzWoof(),
-                         rules.FizzBuzz(),
-                         rules.Woof(),
-                         rules.Buzz(),
-                         rules.Fizz(),
-                         rules.Number()])
+                             rules.BuzzWoof(),
+                             rules.FizzWoof(),
+                             rules.FizzBuzz(),
+                             rules.Woof(),
+                             rules.Buzz(),
+                             rules.Fizz(),
+                             rules.Number()])
 
 class FizzBuzzWoof:
     def __init__(self, rules):
