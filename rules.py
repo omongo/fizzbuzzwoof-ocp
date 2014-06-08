@@ -1,13 +1,3 @@
-from abc import ABC, abstractmethod
-
-class Rule(ABC):
-    @abstractmethod
-    def is_valid(self, number):
-        pass
-    @abstractmethod
-    def say(self, number):
-        pass
-
 class Number:
     def is_valid(self, number):
         return True
@@ -56,11 +46,3 @@ class FizzBuzzWoof:
     def say(self, number):
         return 'FizzBuzzWoof'
 
-Rule.register(Number)
-Rule.register(Fizz)
-Rule.register(Buzz)
-Rule.register(Woof)
-Rule.register(FizzBuzz)
-Rule.register(FizzWoof)
-Rule.register(BuzzWoof)
-Rule.register(FizzBuzzWoof)
