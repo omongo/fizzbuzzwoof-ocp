@@ -8,8 +8,7 @@ class FizzBuzzWoofFactory:
                              rules.FizzBuzz(),
                              rules.Woof(),
                              rules.Buzz(),
-                             rules.Fizz(),
-                             rules.Number()])
+                             rules.Fizz()])
 
 class FizzBuzzWoof:
     def __init__(self, rules):
@@ -17,5 +16,5 @@ class FizzBuzzWoof:
     def say(self, number):
         for rule in self.rules:
             if rule.is_valid(number):
-                return rule.say(number)
-
+                return rule.say()
+        return str(number)
