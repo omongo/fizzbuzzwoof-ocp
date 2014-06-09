@@ -1,7 +1,8 @@
-from unittest import TestCase
+import unittest
+
 from fizzbuzzwoof import FizzBuzzWoofFactory
 
-class TestFizzBuzz(TestCase):
+class TestFizzBuzz(unittest.TestCase):
 
     def test_1_should_be_1(self):
         expected = '1'

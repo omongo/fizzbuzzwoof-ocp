@@ -2,9 +2,7 @@ import rules
 
 class FizzBuzzWoofFactory:
     def create(self):
-        return FizzBuzzWoof([rules.Fizz(),
-                             rules.Buzz(),
-                             rules.Woof()])
+        return FizzBuzzWoof([rules.Fizz(), rules.Buzz(), rules.Woof()])
 
 class FizzBuzzWoof:
     def __init__(self, rules):
