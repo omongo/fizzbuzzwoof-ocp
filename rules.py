@@ -1,42 +1,31 @@
-class Fizz:
+from abc import ABC, abstractmethod
+
+class Rule(ABC):
+    @abstractmethod
+    def is_valid(self):
+        pass
+    @property
+    def syllable(self):
+        return self._syllable
+    @syllable.setter
+    def syllable(self, val):
+        self._syllable = val
+
+class Fizz(Rule):
+    def __init__(self):
+        self._syllable = 'Fizz'
     def is_valid(self, number):
         return number % 3 == 0
-    def say(self):
-        return 'Fizz'
 
-class Buzz:
+class Buzz(Rule):
+    def __init__(self):
+        self._syllable = 'Buzz'
     def is_valid(self, number):
         return number % 5 == 0
-    def say(self):
-        return 'Buzz'
 
-class Woof:
+class Woof(Rule):
+    def __init__(self):
+        self._syllable = 'Woof'
     def is_valid(self, number):
         return number % 7 == 0
-    def say(self):
-        return 'Woof'
-
-class FizzBuzz:
-    def is_valid(self, number):
-        return number % 15 == 0
-    def say(self):
-        return 'FizzBuzz'
-
-class FizzWoof:
-    def is_valid(self, number):
-        return number % 21 == 0
-    def say(self):
-        return 'FizzWoof'
-
-class BuzzWoof:
-    def is_valid(self, number):
-        return number % 35 == 0
-    def say(self):
-        return 'BuzzWoof'
-
-class FizzBuzzWoof:
-    def is_valid(self, number):
-        return number % 105 == 0
-    def say(self):
-        return 'FizzBuzzWoof'
 

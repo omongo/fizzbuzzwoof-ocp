@@ -2,19 +2,16 @@ import rules
 
 class FizzBuzzWoofFactory:
     def create(self):
-        return FizzBuzzWoof([rules.FizzBuzzWoof(), 
-                             rules.BuzzWoof(),
-                             rules.FizzWoof(),
-                             rules.FizzBuzz(),
-                             rules.Woof(),
+        return FizzBuzzWoof([rules.Fizz(),
                              rules.Buzz(),
-                             rules.Fizz()])
+                             rules.Woof()])
 
 class FizzBuzzWoof:
     def __init__(self, rules):
-        self.rules = rules[:]
+        self._rules = rules[:]
     def say(self, number):
-        for rule in self.rules:
-            if rule.is_valid(number):
-                return rule.say()
-        return str(number)
+        word = ''
+        for rule in self._rules:
+            word += rule.syllable * rule.is_valid(number)
+        return word or str(number)
+
